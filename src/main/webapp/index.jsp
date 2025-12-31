@@ -52,10 +52,11 @@
 
     <aside class="side">
         <div class="info card">
-            <h3 style="margin:0 0 8px 0">Server Info</h3>
+            <h3 style="margin:0 0 8px 0">Server & Load Balancer Info</h3>
             <p class="small"><b>Current Time:</b> <%= new java.util.Date() %></p>
             <p class="small"><b>Server:</b> <%= request.getServerName() %>:<%= request.getServerPort() %></p>
             <p class="small"><b>JSP Reload Counter:</b> <%= Math.round(Math.random() * 100000) %></p>
+            <p class="small" style="color:#ff9800;"><b>Served via:</b> Load Balancer (Kubernetes Service: <code>my-java-webapp-service</code>)</p>
             <a class="back" href="#">Refresh</a>
         </div>
 
